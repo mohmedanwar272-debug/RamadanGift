@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رمضان وأحنا سوا ❤️</title>
+    <style>
+        body { background: #0b0d17; color: white; text-align: center; font-family: sans-serif; margin: 0; padding: 20px; }
+        #lock { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        #content { display: none; }
+        input { padding: 12px; border-radius: 8px; border: 1px solid #d4af37; background: #1a1c2c; color: #fff; margin: 15px; width: 200px; text-align: center; }
+        button { padding: 12px 25px; background: #d4af37; border: none; font-weight: bold; cursor: pointer; border-radius: 8px; color: #0b0d17; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        img, video { width: 95%; max-width: 350px; border: 2px solid #d4af37; border-radius: 15px; margin-bottom: 15px; }
+        h1 { color: #d4af37; }
+    </style>
+</head>
+<body>
+    <div id="lock">
+        <h2>اكتبي تاريخ لقائنا ❤️</h2>
+        <input type="text" id="pass" placeholder="اليوم الشهر السنة">
+        <button onclick="check()">فتح الهدية</button>
+    </div>
+
+    <div id="content">
+        <h1>رمضان وأحنا سوا ❤️</h1>
+        <p>كل سنة وأنتِ معايا يا ست الكل..</p>
+        <div class="gallery">
+            <img src="1.jpg"> <img src="2.jpg"> <img src="3.jpg"> <img src="4.jpg"> <img src="5.jpg">
+            <video controls><source src="1.mp4" type="video/mp4"></video>
+            <video controls><source src="2.mp4" type="video/mp4"></video>
+            <video controls><source src="3.mp4" type="video/mp4"></video>
+            <video controls><source src="4.mp4" type="video/mp4"></video>
+            <video controls><source src="5.mp4" type="video/mp4"></video>
+        </div>
+    </div>
+
+    <script>
+        function check() {
+            let p = document.getElementById('pass').value;
+            if(p === "14 7 2007") {
+                document.getElementById('lock').style.display='none';
+                document.getElementById('content').style.display='block';
+            } else { alert("التاريخ غلط!"); }
+        }
+    </script>
+</body>
+</html>
